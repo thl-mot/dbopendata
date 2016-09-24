@@ -23,6 +23,7 @@ import com.lauerbach.dbopendata.bahnde.xml.Note;
 import com.lauerbach.dbopendata.bahnde.xml.Type;
 
 /**
+ * 
  * http://download-data.deutschebahn.com/static/apis/fahrplan/Fpl-API-Doku-Open-Data-BETA-0_81_2.pdf
  * 
  * https://open-api.bahn.de/bin/rest.exe
