@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LocationList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://open-api.bahn.de/bin/rest.exe/v1.0/xsd?name=hafasRestLocation.xsd">
+<StopLocation name="Karlsruhe Hbf" lon="8.402181" lat="48.993511" id="008000191" />
+<StopLocation name="Karlsruhe-Durlach" lon="8.462822" lat="49.002330" id="008003184" />
+</LocationList>

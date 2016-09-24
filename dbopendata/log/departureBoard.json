@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DepartureBoard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://open-api.bahn.de/bin/rest.exe/v1.0/xsd?name=hafasRestDepartureBoard.xsd">
+<Departure name="IC 2267" type="IC"  stopid="8000191" stop="Karlsruhe Hbf"  time="18:05" date="2016-09-23" direction="München Hbf" track="7">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=510345%2F175091%2F356766%2F8268%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Ddep%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Departure>
+<Departure name="TGV 9560" tyte="TGV"  stopid="8000191" stop="Karlsruhe Hbf"  time="18:07" date="2016-09-23" direction="Paris Est" track="2">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=918456%2F316318%2F375850%2F118227%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Ddep%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Departure>
+<Departure name="IC 206" type="IC"  stopid="8000191" stop="Karlsruhe Hbf"  time="18:12" date="2016-09-23" direction="Frankfurt(Main)Hbf" track="5">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=214440%2F82731%2F414594%2F135817%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Ddep%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Departure>
+<Departure name="IC 1177" type="IC"  stopid="8000191" stop="Karlsruhe Hbf"  time="18:27" date="2016-09-23" direction="Basel Bad Bf" track="8">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=543015%2F182635%2F733386%2F185688%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Ddep%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Departure>
+<Departure name="TGV 9577" tyte="TGV"  stopid="8000191" stop="Karlsruhe Hbf"  time="18:28" date="2016-09-23" direction="München Hbf" track="7">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=219129%2F83284%2F606094%2F230004%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Ddep%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Departure>
+<Departure name="ICE 376" type="ICE"  stopid="8000191" stop="Karlsruhe Hbf"  time="18:51" date="2016-09-23" direction="Hamburg-Altona" track="3">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=736794%2F252195%2F891398%2F200101%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Ddep%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Departure>
+<Departure name="ICE 102" type="ICE"  stopid="8000191" stop="Karlsruhe Hbf"  time="19:00" date="2016-09-23" direction="Hannover Hbf" track="3">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=77001%2F26523%2F532950%2F240808%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Ddep%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Departure>
+<Departure name="ICE 201" type="ICE"  stopid="8000191" stop="Karlsruhe Hbf"  time="19:00" date="2016-09-23" direction="Basel SBB" track="2">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=3666%2F4662%2F691440%2F344498%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Ddep%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Departure>
+<Departure name="IC 2165" type="IC"  stopid="8000191" stop="Karlsruhe Hbf"  time="19:06" date="2016-09-23" direction="Nürnberg Hbf" track="11">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=127863%2F46837%2F26686%2F29278%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Ddep%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Departure>
+<Departure name="IC 2272" type="IC"  stopid="8000191" stop="Karlsruhe Hbf"  time="19:10" date="2016-09-23" direction="Frankfurt(Main)Hbf" track="6">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=65628%2F26889%2F193798%2F75023%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Ddep%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Departure>
+<Departure name="ICE 79" type="ICE"  stopid="8000191" stop="Karlsruhe Hbf"  time="19:10" date="2016-09-23" direction="Zürich HB" track="2">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=363345%2F133777%2F434792%2F96281%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Ddep%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Departure>
+<Departure name="TGV 9570" tyte="TGV"  stopid="8000191" stop="Karlsruhe Hbf"  time="19:32" date="2016-09-23" direction="Paris Est" track="6">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=106122%2F45564%2F616916%2F273084%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Ddep%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Departure>
+<Departure name="IC 2264" type="IC"  stopid="8000191" stop="Karlsruhe Hbf"  time="19:55" date="2016-09-23" direction="Basel Bad Bf" track="6">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=235728%2F83519%2F850728%2F346788%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Ddep%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Departure>
+<Departure name="ICE 272" type="ICE"  stopid="8000191" stop="Karlsruhe Hbf"  time="20:00" date="2016-09-23" direction="Hamburg-Altona" track="3">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=366321%2F128533%2F373780%2F64783%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Ddep%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Departure>
+<Departure name="ICE 375" type="ICE"  stopid="8000191" stop="Karlsruhe Hbf"  time="20:00" date="2016-09-23" direction="Basel SBB" track="2">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=360666%2F126809%2F596048%2F177802%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Ddep%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Departure>
+<Departure name="IC 2269" type="IC"  stopid="8000191" stop="Karlsruhe Hbf"  time="20:05" date="2016-09-23" direction="Stuttgart Hbf" track="8">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=753834%2F256262%2F942650%2F220047%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Ddep%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Departure>
+<Departure name="TGV 9579" tyte="TGV"  stopid="8000191" stop="Karlsruhe Hbf"  time="20:28" date="2016-09-23" direction="Stuttgart Hbf" track="7">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=464838%2F167712%2F479176%2F84642%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Ddep%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Departure>
+<Departure name="ICE 100" type="ICE"  stopid="8000191" stop="Karlsruhe Hbf"  time="21:01" date="2016-09-23" direction="Dortmund Hbf" track="3">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=471672%2F157975%2F453546%2F69549%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Ddep%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Departure>
+<Departure name="IC 2167" type="IC"  stopid="8000191" stop="Karlsruhe Hbf"  time="21:06" date="2016-09-23" direction="Stuttgart Hbf" track="10">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=374586%2F129088%2F39364%2F105180%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Ddep%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Departure>
+<Departure name="ICE 203" type="ICE"  stopid="8000191" stop="Karlsruhe Hbf"  time="21:12" date="2016-09-23" direction="Basel SBB" track="1">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=276363%2F95847%2F398688%2F107223%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Ddep%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Departure>
+</DepartureBoard>

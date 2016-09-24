@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ArrivalBoard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://open-api.bahn.de/bin/rest.exe/v1.0/xsd?name=hafasRestArrivalBoard.xsd">
+<Arrival name="TGV 9560" type="TGV"  stopid="8000191" stop="Karlsruhe Hbf"  time="18:05" date="2016-09-23" origin="Frankfurt(Main)Hbf" track="2">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=291225%2F107241%2F382166%2F94008%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Darr%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Arrival>
+<Arrival name="IC 206" type="IC"  stopid="8000191" stop="Karlsruhe Hbf"  time="18:08" date="2016-09-23" origin="Zürich HB" track="5">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=185298%2F73017%2F852068%2F364268%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Darr%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Arrival>
+<Arrival name="IC 1177" type="IC"  stopid="8000191" stop="Karlsruhe Hbf"  time="18:15" date="2016-09-23" origin="Frankfurt(Main)Hbf" track="8">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=70200%2F25030%2F560954%2F257077%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Darr%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Arrival>
+<Arrival name="IC 2360" type="IC"  stopid="8000191" stop="Karlsruhe Hbf"  time="18:21" date="2016-09-23" origin="Stuttgart Hbf" track="6">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=295431%2F103976%2F965836%2F384441%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Darr%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Arrival>
+<Arrival name="TGV 9577" type="TGV"  stopid="8000191" stop="Karlsruhe Hbf"  time="18:25" date="2016-09-23" origin="Paris Est" track="7">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=860346%2F297023%2F67550%2F253007%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Darr%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Arrival>
+<Arrival name="ICE 376" type="ICE"  stopid="8000191" stop="Karlsruhe Hbf"  time="18:49" date="2016-09-23" origin="Interlaken Ost" track="3">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=750381%2F256724%2F331486%2F84384%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Darr%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Arrival>
+<Arrival name="IC 2373" type="IC"  stopid="8000191" stop="Karlsruhe Hbf"  time="18:52" date="2016-09-23" origin="Stralsund Hbf" track="5">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=51942%2F22910%2F334608%2F149990%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Darr%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Arrival>
+<Arrival name="IC 2064" type="IC"  stopid="8000191" stop="Karlsruhe Hbf"  time="18:53" date="2016-09-23" origin="Nürnberg Hbf" track="9">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=425178%2F145910%2F411496%2F64023%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Darr%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Arrival>
+<Arrival name="ICE 102" type="ICE"  stopid="8000191" stop="Karlsruhe Hbf"  time="18:58" date="2016-09-23" origin="Basel SBB" track="3">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=88137%2F30235%2F596846%2F269044%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Darr%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Arrival>
+<Arrival name="ICE 201" type="ICE"  stopid="8000191" stop="Karlsruhe Hbf"  time="18:58" date="2016-09-23" origin="Köln Hbf" track="2">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=794580%2F268300%2F596166%2F33223%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Darr%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Arrival>
+<Arrival name="ICE 79" type="ICE"  stopid="8000191" stop="Karlsruhe Hbf"  time="19:08" date="2016-09-23" origin="Hamburg-Altona" track="2">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=350190%2F129392%2F900132%2F333336%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Darr%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Arrival>
+<Arrival name="TGV 9570" type="TGV"  stopid="8000191" stop="Karlsruhe Hbf"  time="19:30" date="2016-09-23" origin="Stuttgart Hbf" track="6">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=75120%2F35230%2F499108%2F224514%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Darr%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Arrival>
+<Arrival name="IC 2264" type="IC"  stopid="8000191" stop="Karlsruhe Hbf"  time="19:53" date="2016-09-23" origin="München Hbf" track="6">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=566424%2F193751%2F330822%2F23397%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Darr%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Arrival>
+<Arrival name="ICE 272" type="ICE"  stopid="8000191" stop="Karlsruhe Hbf"  time="19:58" date="2016-09-23" origin="Zürich HB" track="3">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=428616%2F149298%2F356782%2F35519%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Darr%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Arrival>
+<Arrival name="ICE 375" type="ICE"  stopid="8000191" stop="Karlsruhe Hbf"  time="19:58" date="2016-09-23" origin="Berlin Ostbahnhof" track="2">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=760842%2F260201%2F885026%2F188899%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Darr%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Arrival>
+<Arrival name="TGV 9579" type="TGV"  stopid="8000191" stop="Karlsruhe Hbf"  time="20:25" date="2016-09-23" origin="Paris Est" track="7">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=588747%2F209015%2F36222%2F178138%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Darr%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Arrival>
+<Arrival name="IC 2062" type="IC"  stopid="8000191" stop="Karlsruhe Hbf"  time="20:48" date="2016-09-23" origin="Nürnberg Hbf" track="7">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=435906%2F149196%2F212368%2F39118%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Darr%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Arrival>
+<Arrival name="IC 2375" type="IC"  stopid="8000191" stop="Karlsruhe Hbf"  time="20:54" date="2016-09-23" origin="Westerland(Sylt)" track="5">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=826338%2F281081%2F7394%2F271749%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Darr%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Arrival>
+<Arrival name="ICE 100" type="ICE"  stopid="8000191" stop="Karlsruhe Hbf"  time="20:59" date="2016-09-23" origin="Basel SBB" track="3">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=656133%2F219462%2F445726%2F4152%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Darr%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Arrival>
+<Arrival name="ICE 203" type="ICE"  stopid="8000191" stop="Karlsruhe Hbf"  time="21:00" date="2016-09-23" origin="Köln Hbf" track="1">
+<JourneyDetailRef ref="https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=954459%2F321879%2F13754%2F311276%2F80%3Fdate%3D2016-09-23%26station_evaId%3D8000191%26station_type%3Darr%26authKey%3DDBhackFrankfurt0316%26lang%3Den%26format%3Dxml%26" />
+</Arrival>
+</ArrivalBoard>

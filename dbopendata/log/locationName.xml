@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LocationList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://open-api.bahn.de/bin/rest.exe/v1.0/xsd?name=hafasRestLocation.xsd">
+<StopLocation name="Berlin Hbf" lon="13.369548" lat="52.525589" id="008011160" />
+<StopLocation name="Berlin Südkreuz" lon="13.365314" lat="52.475042" id="008011113" />
+<StopLocation name="Berlin-Spandau" lon="13.197530" lat="52.534470" id="008010404" />
+<StopLocation name="Berlin Gesundbrunnen" lon="13.388515" lat="52.548961" id="008011102" />
+<StopLocation name="Berlin Ostbahnhof" lon="13.434567" lat="52.510972" id="008010255" />
+<StopLocation name="Bernau(b Berlin)" lon="13.592292" lat="52.675834" id="008013470" />
+<StopLocation name="Berlin-Lichtenberg" lon="13.496925" lat="52.509894" id="008010036" />
+<StopLocation name="BERLINO" lon="13.386987" lat="52.520501" id="008096003" />
+<StopLocation name="Berlin Wannsee" lon="13.179336" lat="52.421053" id="008010405" />
+<StopLocation name="Berchtesgaden Hbf" lon="12.999058" lat="47.626683" id="008000885" />
+<StopLocation name="Bergen auf Rügen" lon="13.417820" lat="54.420497" id="008010033" />
+<StopLocation name="Bern" lon="7.438483" lat="46.949113" id="008507000" />
+<StopLocation name="Bamberg" lon="10.899492" lat="49.900757" id="008000025" />
+<StopLocation name="Biberach(Riß)" lon="9.793127" lat="48.101844" id="008000943" />
+<StopLocation name="Bern Wankdorf" lon="7.465496" lat="46.967846" id="008516161" />
+<StopLocation name="Bad Reichenhall-Kirchberg" lon="12.874000" lat="47.718535" id="008000738" />
+<StopLocation name="Herrliberg-Feldmeilen" lon="8.612843" lat="47.281920" id="008503103" />
+<StopLocation name="Mellingen Heitersberg" lon="8.275945" lat="47.428076" id="008516219" />
+<StopLocation name="Zürich Oerlikon" lon="8.544453" lat="47.411904" id="008503006" />
+<StopLocation name="Bromberg/Bydgoszcz" lon="17.991640" lat="53.135111" id="005100005" />
+</LocationList>
