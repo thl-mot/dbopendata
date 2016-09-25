@@ -1,7 +1,6 @@
 package com.lauerbach.dbopendata.bahnde.xml;
 
 import java.net.MalformedURLException;
-import java.net.URI;
 import java.net.URL;
 
 import javax.xml.bind.annotation.XmlAttribute;

@@ -96,7 +96,7 @@ public class OpenDataClient {
 			Unmarshaller um = context.createUnmarshaller();
 			// um.setEventHandler(new
 			// javax.xml.bind.helpers.DefaultValidationEventHandler());
-			System.out.println("Request " + requestUrl.toString());
+			// System.out.println("Request " + requestUrl.toString());
 			InputStream is = new BufferedInputStream(requestUrl.openStream());
 			response = um.unmarshal(is);
 			is.close();

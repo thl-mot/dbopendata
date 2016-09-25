@@ -1,7 +1,6 @@
 package com.lauerbach.dbopendata.bahnde.xml;
 
 import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
 
 public class StopLocation {
 
