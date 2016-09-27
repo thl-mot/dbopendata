@@ -6,7 +6,7 @@ import java.util.Iterator;
 
 import org.junit.Test;
 
-import com.lauerbach.dbopendata.bahnde.OpenDataClient;
+import com.lauerbach.dbopendata.bahnde.DBOpenDataService;
 import com.lauerbach.dbopendata.bahnde.xml.Arrival;
 import com.lauerbach.dbopendata.bahnde.xml.ArrivalBoard;
 import com.lauerbach.dbopendata.bahnde.xml.Departure;
@@ -20,7 +20,7 @@ public class TestOpenDataClient {
 
 	@Test
 	public void test1() {
-		OpenDataClient client = new OpenDataClient();
+		DBOpenDataService client = new DBOpenDataService();
 		LocationList l = client.getLocationName("Karlsruhe Hbf");
 		Iterator<StopLocation> i = l.getStopLocation().iterator();
 		while (i.hasNext()) {
@@ -32,7 +32,7 @@ public class TestOpenDataClient {
 
 	@Test
 	public void test2() {
-		OpenDataClient client = new OpenDataClient();
+		DBOpenDataService client = new DBOpenDataService();
 		LocationList l = client.getLocationName("Karlsruhe Hbf");
 		StopLocation stopLocation= l.getStopLocation().get(0);
 		ArrivalBoard arrivals = client.getArrivalBoard( stopLocation.getId(), new Date());
@@ -47,7 +47,7 @@ public class TestOpenDataClient {
 	}
 	@Test
 	public void test3() {
-		OpenDataClient client = new OpenDataClient();
+		DBOpenDataService client = new DBOpenDataService();
 		LocationList l = client.getLocationName("Karlsruhe Hbf");
 		StopLocation stopLocation= l.getStopLocation().get(0);
 		DepartureBoard arrivals = client.getDepartureBoard( stopLocation.getId(), new Date());
@@ -62,7 +62,7 @@ public class TestOpenDataClient {
 	}
 	@Test
 	public void test4() throws MalformedURLException {
-		OpenDataClient client = new OpenDataClient();
+		DBOpenDataService client = new DBOpenDataService();
 		LocationList l = client.getLocationName("Karlsruhe HBF");
 		StopLocation ka= l.getStopLocation().get(0);
 		DepartureBoard departures = client.getDepartureBoard( ka.getId(), new Date());

@@ -1,0 +1,507 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xs:element name="itdRequest" type="itdRequestType"/>
+  <xs:complexType name="ptKernelType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="appVersion"/>
+      <xs:element type="xs:string" name="dataFormat"/>
+      <xs:element type="xs:dateTime" name="dataBuild"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="itdVersionInfoType">
+    <xs:sequence>
+      <xs:element type="ptKernelType" name="ptKernel"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="paramType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="type"/>
+      <xs:element type="xs:string" name="name"/>
+      <xs:element type="xs:string" name="value"/>
+    </xs:sequence>
+    <xs:attribute type="xs:byte" name="edit" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="paramListType">
+    <xs:sequence>
+      <xs:element type="paramType" name="param" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="outputClientTextType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="htmlText"/>
+      <xs:element type="xs:string" name="wmlText"/>
+      <xs:element type="xs:string" name="smsText"/>
+      <xs:element type="xs:string" name="speechText"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="infoTextType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="content"/>
+      <xs:element type="xs:string" name="subtitle"/>
+      <xs:element type="xs:string" name="subject"/>
+      <xs:element type="xs:string" name="additionalText"/>
+      <xs:element type="xs:string" name="image"/>
+      <xs:element type="outputClientTextType" name="outputClientText"/>
+      <xs:element type="additionalLinksType" name="additionalLinks" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="infoLinkType">
+    <xs:sequence>
+      <xs:element type="paramListType" name="paramList"/>
+      <xs:element type="xs:string" name="infoLinkText"/>
+      <xs:element type="xs:anyURI" name="infoLinkURL"/>
+      <xs:element type="xs:string" name="infoLinkImage"/>
+      <xs:element type="infoTextType" name="infoText"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="additionalLinkType">
+    <xs:sequence>
+      <xs:element type="xs:anyURI" name="linkURL"/>
+      <xs:element type="xs:string" name="linkText"/>
+      <xs:element type="xs:string" name="linkTextShort"/>
+      <xs:element type="xs:string" name="linkTarget"/>
+    </xs:sequence>
+    <xs:attribute type="xs:byte" name="ID"/>
+  </xs:complexType>
+  <xs:complexType name="additionalLinksType">
+    <xs:sequence>
+      <xs:element type="additionalLinkType" name="additionalLink"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="itdBannerInfoListType">
+    <xs:sequence>
+      <xs:element type="infoLinkType" name="infoLink" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="itdInfoLinkListType">
+    <xs:sequence>
+      <xs:element type="itdBannerInfoListType" name="itdBannerInfoList"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="serviceAreaType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="name" use="optional"/>
+        <xs:attribute type="xs:string" name="net" use="optional"/>
+        <xs:attribute type="xs:byte" name="selected" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="serviceAreaInfoType">
+    <xs:sequence>
+      <xs:element type="serviceAreaType" name="serviceArea" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="serverMetaInfoType">
+    <xs:sequence>
+      <xs:element type="serviceAreaInfoType" name="serviceAreaInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="itdPrintConfigurationType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="active"/>
+        <xs:attribute type="xs:byte" name="printerDirect"/>
+        <xs:attribute type="xs:string" name="layout"/>
+        <xs:attribute type="xs:string" name="outputFormat"/>
+        <xs:attribute type="xs:byte" name="fontSizeNormal"/>
+        <xs:attribute type="xs:byte" name="shading"/>
+        <xs:attribute type="xs:byte" name="commuterFaresOutput"/>
+        <xs:attribute type="xs:string" name="fareUnitOrientation"/>
+        <xs:attribute type="xs:string" name="serverAddress"/>
+        <xs:attribute type="xs:string" name="serverInfo"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="itdAddressType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="name"/>
+        <xs:attribute type="xs:string" name="street"/>
+        <xs:attribute type="xs:string" name="place"/>
+        <xs:attribute type="xs:string" name="addressExt1"/>
+        <xs:attribute type="xs:string" name="addressExt2"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="itdOdvPlaceType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="odvPlaceElem"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="state" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="itdMessageType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="type" use="optional"/>
+        <xs:attribute type="xs:string" name="module" use="optional"/>
+        <xs:attribute type="xs:short" name="code" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="odvNameElemType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:short" name="listIndex" use="optional"/>
+        <xs:attribute type="xs:byte" name="selected" use="optional"/>
+        <xs:attribute type="xs:short" name="matchQuality" use="optional"/>
+        <xs:attribute type="xs:int" name="x" use="optional"/>
+        <xs:attribute type="xs:int" name="y" use="optional"/>
+        <xs:attribute type="xs:string" name="mapName" use="optional"/>
+        <xs:attribute type="xs:int" name="id" use="optional"/>
+        <xs:attribute type="xs:int" name="omc" use="optional"/>
+        <xs:attribute type="xs:byte" name="placeID" use="optional"/>
+        <xs:attribute type="xs:string" name="anyType" use="optional"/>
+        <xs:attribute type="xs:byte" name="anyTypeSort" use="optional"/>
+        <xs:attribute type="xs:string" name="locality" use="optional"/>
+        <xs:attribute type="xs:string" name="objectName" use="optional"/>
+        <xs:attribute type="xs:string" name="buildingName" use="optional"/>
+        <xs:attribute type="xs:string" name="buildingNumber" use="optional"/>
+        <xs:attribute type="xs:string" name="postCode" use="optional"/>
+        <xs:attribute type="xs:string" name="streetName" use="optional"/>
+        <xs:attribute type="xs:string" name="nameKey" use="optional"/>
+        <xs:attribute type="xs:string" name="mainLocality" use="optional"/>
+        <xs:attribute type="xs:string" name="stateless" use="optional"/>
+        <xs:attribute type="xs:string" name="value" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="itdOdvNameType">
+    <xs:sequence>
+      <xs:element type="itdMessageType" name="itdMessage" minOccurs="0"/>
+      <xs:element type="odvNameElemType" name="odvNameElem" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element type="xs:string" name="odvNameInput" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="state" use="optional"/>
+    <xs:attribute type="xs:string" name="method" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="itdOdvType">
+    <xs:sequence>
+      <xs:element type="itdOdvPlaceType" name="itdOdvPlace"/>
+      <xs:element type="itdOdvNameType" name="itdOdvName"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="type" use="optional"/>
+    <xs:attribute type="xs:string" name="usage" use="optional"/>
+    <xs:attribute type="xs:byte" name="anyObjFilter" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="itdDateType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="weekday" use="optional"/>
+        <xs:attribute type="xs:short" name="year" use="optional"/>
+        <xs:attribute type="xs:byte" name="month" use="optional"/>
+        <xs:attribute type="xs:byte" name="day" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="itdTimeType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="hour"/>
+        <xs:attribute type="xs:byte" name="minute"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="itdDateTimeType">
+    <xs:sequence>
+      <xs:element type="itdDateType" name="itdDate"/>
+      <xs:element type="itdTimeType" name="itdTime"/>
+    </xs:sequence>
+    <xs:attribute type="xs:int" name="ttpFrom"/>
+    <xs:attribute type="xs:int" name="ttpTo"/>
+  </xs:complexType>
+  <xs:complexType name="itdDateRangeType">
+    <xs:sequence>
+      <xs:element type="itdDateType" name="itdDate" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="itdTripDateTimeType">
+    <xs:sequence>
+      <xs:element type="itdDateTimeType" name="itdDateTime"/>
+      <xs:element type="itdDateRangeType" name="itdDateRange"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="deparr"/>
+    <xs:attribute type="xs:int" name="ttpFrom"/>
+    <xs:attribute type="xs:int" name="ttpTo"/>
+  </xs:complexType>
+  <xs:complexType name="meansElemType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="value" use="optional"/>
+        <xs:attribute type="xs:byte" name="selected" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="excludedMeansType">
+    <xs:sequence>
+      <xs:element type="meansElemType" name="meansElem" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="itdPtOptionsType">
+    <xs:sequence>
+      <xs:element type="excludedMeansType" name="excludedMeans"/>
+      <xs:element type="xs:string" name="specialTickets"/>
+    </xs:sequence>
+    <xs:attribute type="xs:byte" name="active"/>
+    <xs:attribute type="xs:byte" name="maxChanges"/>
+    <xs:attribute type="xs:short" name="maxTime"/>
+    <xs:attribute type="xs:byte" name="maxWait"/>
+    <xs:attribute type="xs:string" name="routeType"/>
+    <xs:attribute type="xs:string" name="changeSpeed"/>
+    <xs:attribute type="xs:short" name="lineRestriction"/>
+    <xs:attribute type="xs:byte" name="useProxFootSearch"/>
+    <xs:attribute type="xs:byte" name="useProxFootSearchOrigin"/>
+    <xs:attribute type="xs:byte" name="useProxFootSearchDestination"/>
+    <xs:attribute type="xs:byte" name="bike"/>
+    <xs:attribute type="xs:byte" name="plane"/>
+    <xs:attribute type="xs:byte" name="noCrowded"/>
+    <xs:attribute type="xs:byte" name="noSolidStairs"/>
+    <xs:attribute type="xs:byte" name="noEscalators"/>
+    <xs:attribute type="xs:byte" name="noElevators"/>
+    <xs:attribute type="xs:byte" name="lowPlatformVhcl"/>
+    <xs:attribute type="xs:byte" name="wheelchair"/>
+    <xs:attribute type="xs:byte" name="needElevatedPlt"/>
+    <xs:attribute type="xs:byte" name="assistance"/>
+    <xs:attribute type="xs:byte" name="SOSAvail"/>
+    <xs:attribute type="xs:byte" name="noLonelyTransfer"/>
+    <xs:attribute type="xs:byte" name="illumTransfer"/>
+    <xs:attribute type="xs:byte" name="overgroundTransfer"/>
+    <xs:attribute type="xs:byte" name="noInsecurePlaces"/>
+    <xs:attribute type="xs:byte" name="privateTransport"/>
+    <xs:attribute type="xs:byte" name="activeImp"/>
+    <xs:attribute type="xs:byte" name="activeCom"/>
+    <xs:attribute type="xs:byte" name="activeSec"/>
+    <xs:attribute type="xs:byte" name="twoSidedAlt"/>
+    <xs:attribute type="xs:string" name="level"/>
+    <xs:attribute type="xs:byte" name="forcedStartDest"/>
+  </xs:complexType>
+  <xs:complexType name="itRouterType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="logASCII"/>
+        <xs:attribute type="xs:string" name="logSVG"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="itPedestrianType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="computeMonomodalTrip"/>
+        <xs:attribute type="xs:string" name="computationType"/>
+        <xs:attribute type="xs:string" name="itIncidentData"/>
+        <xs:attribute type="xs:string" name="useElevation"/>
+        <xs:attribute type="xs:byte" name="speedFactor"/>
+        <xs:attribute type="xs:byte" name="costFactor"/>
+        <xs:attribute type="xs:byte" name="distanceFactor"/>
+        <xs:attribute type="xs:byte" name="traveltimeFactor"/>
+        <xs:attribute type="xs:string" name="noTunnel"/>
+        <xs:attribute type="xs:string" name="noBridge"/>
+        <xs:attribute type="xs:string" name="noFerry"/>
+        <xs:attribute type="xs:byte" name="maxTime"/>
+        <xs:attribute type="xs:byte" name="minTime"/>
+        <xs:attribute type="xs:int" name="maxLength"/>
+        <xs:attribute type="xs:byte" name="minLength"/>
+        <xs:attribute type="xs:string" name="ignoreRestrictions"/>
+        <xs:attribute type="xs:string" name="computeAlternativeRoutes"/>
+        <xs:attribute type="xs:string" name="level"/>
+        <xs:attribute type="xs:byte" name="prefIllum"/>
+        <xs:attribute type="xs:byte" name="prefToilet"/>
+        <xs:attribute type="xs:byte" name="prefBench"/>
+        <xs:attribute type="xs:byte" name="useHdcAcc"/>
+        <xs:attribute type="xs:byte" name="useGeoRefs"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="itBicycleType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="preferAsphaltTracks"/>
+        <xs:attribute type="xs:string" name="preferGreenTracks"/>
+        <xs:attribute type="xs:string" name="usePseudoRouting"/>
+        <xs:attribute type="xs:string" name="useSignedRoute"/>
+        <xs:attribute type="xs:byte" name="cycleSpeed"/>
+        <xs:attribute type="xs:string" name="prefHikePath"/>
+        <xs:attribute type="xs:byte" name="elevFac"/>
+        <xs:attribute type="xs:string" name="useNetClasses"/>
+        <xs:attribute type="xs:string" name="useDrawClasses"/>
+        <xs:attribute type="xs:string" name="useEnv"/>
+        <xs:attribute type="xs:string" name="inclEnvLeisureRoutes"/>
+        <xs:attribute type="xs:string" name="inclEnvTrafficDensity"/>
+        <xs:attribute type="xs:string" name="useSurfQuality"/>
+        <xs:attribute type="xs:string" name="inclSurfQualGravel"/>
+        <xs:attribute type="xs:string" name="inclSurfQualForrest"/>
+        <xs:attribute type="xs:string" name="inclSurfQualSingleTrial"/>
+        <xs:attribute type="xs:string" name="inclSurfQualCarry"/>
+        <xs:attribute type="xs:string" name="useLayoutStructural"/>
+        <xs:attribute type="xs:string" name="useLayoutDirections"/>
+        <xs:attribute type="xs:string" name="prefPedestrianSeperated"/>
+        <xs:attribute type="xs:string" name="useRecommRoute"/>
+        <xs:attribute type="xs:string" name="computeMonomodalTrip"/>
+        <xs:attribute type="xs:string" name="computationType"/>
+        <xs:attribute type="xs:string" name="itIncidentData"/>
+        <xs:attribute type="xs:string" name="useElevation"/>
+        <xs:attribute type="xs:byte" name="speedFactor"/>
+        <xs:attribute type="xs:byte" name="costFactor"/>
+        <xs:attribute type="xs:byte" name="distanceFactor"/>
+        <xs:attribute type="xs:byte" name="traveltimeFactor"/>
+        <xs:attribute type="xs:string" name="noTunnel"/>
+        <xs:attribute type="xs:string" name="noBridge"/>
+        <xs:attribute type="xs:string" name="noFerry"/>
+        <xs:attribute type="xs:byte" name="maxTime"/>
+        <xs:attribute type="xs:byte" name="minTime"/>
+        <xs:attribute type="xs:int" name="maxLength"/>
+        <xs:attribute type="xs:byte" name="minLength"/>
+        <xs:attribute type="xs:string" name="ignoreRestrictions"/>
+        <xs:attribute type="xs:string" name="computeAlternativeRoutes"/>
+        <xs:attribute type="xs:string" name="level"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="mitCarType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="computeMonomodalTrip"/>
+        <xs:attribute type="xs:string" name="computationType"/>
+        <xs:attribute type="xs:string" name="itIncidentData"/>
+        <xs:attribute type="xs:string" name="useElevation"/>
+        <xs:attribute type="xs:byte" name="speedFactor"/>
+        <xs:attribute type="xs:byte" name="costFactor"/>
+        <xs:attribute type="xs:byte" name="distanceFactor"/>
+        <xs:attribute type="xs:byte" name="traveltimeFactor"/>
+        <xs:attribute type="xs:string" name="noTunnel"/>
+        <xs:attribute type="xs:string" name="noBridge"/>
+        <xs:attribute type="xs:string" name="noFerry"/>
+        <xs:attribute type="xs:byte" name="maxTime"/>
+        <xs:attribute type="xs:byte" name="minTime"/>
+        <xs:attribute type="xs:int" name="maxLength"/>
+        <xs:attribute type="xs:byte" name="minLength"/>
+        <xs:attribute type="xs:string" name="ignoreRestrictions"/>
+        <xs:attribute type="xs:string" name="computeAlternativeRoutes"/>
+        <xs:attribute type="xs:string" name="level"/>
+        <xs:attribute type="xs:string" name="mitProfileData"/>
+        <xs:attribute type="xs:string" name="mitIncidentData"/>
+        <xs:attribute type="xs:string" name="mitOnlineData"/>
+        <xs:attribute type="xs:string" name="noHighway"/>
+        <xs:attribute type="xs:string" name="noTollRoad"/>
+        <xs:attribute type="xs:string" name="prefSerSt"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="mitTaxiType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="computeMonomodalTrip"/>
+        <xs:attribute type="xs:string" name="computationType"/>
+        <xs:attribute type="xs:string" name="itIncidentData"/>
+        <xs:attribute type="xs:string" name="useElevation"/>
+        <xs:attribute type="xs:byte" name="speedFactor"/>
+        <xs:attribute type="xs:byte" name="costFactor"/>
+        <xs:attribute type="xs:byte" name="distanceFactor"/>
+        <xs:attribute type="xs:byte" name="traveltimeFactor"/>
+        <xs:attribute type="xs:string" name="noTunnel"/>
+        <xs:attribute type="xs:string" name="noBridge"/>
+        <xs:attribute type="xs:string" name="noFerry"/>
+        <xs:attribute type="xs:byte" name="maxTime"/>
+        <xs:attribute type="xs:byte" name="minTime"/>
+        <xs:attribute type="xs:int" name="maxLength"/>
+        <xs:attribute type="xs:byte" name="minLength"/>
+        <xs:attribute type="xs:string" name="ignoreRestrictions"/>
+        <xs:attribute type="xs:string" name="computeAlternativeRoutes"/>
+        <xs:attribute type="xs:string" name="level"/>
+        <xs:attribute type="xs:string" name="mitProfileData"/>
+        <xs:attribute type="xs:string" name="mitIncidentData"/>
+        <xs:attribute type="xs:string" name="mitOnlineData"/>
+        <xs:attribute type="xs:string" name="noHighway"/>
+        <xs:attribute type="xs:string" name="noTollRoad"/>
+        <xs:attribute type="xs:string" name="prefSerSt"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="individualTransportType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="meansCode" use="optional"/>
+        <xs:attribute type="xs:byte" name="value" use="optional"/>
+        <xs:attribute type="xs:string" name="speed" use="optional"/>
+        <xs:attribute type="xs:byte" name="selected" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="departureTransportType">
+    <xs:sequence>
+      <xs:element type="individualTransportType" name="individualTransport" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="arrivalTransportType">
+    <xs:sequence>
+      <xs:element type="individualTransportType" name="individualTransport" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="itdItOptionsType">
+    <xs:sequence>
+      <xs:element type="itRouterType" name="itRouter"/>
+      <xs:element type="itPedestrianType" name="itPedestrian"/>
+      <xs:element type="itBicycleType" name="itBicycle"/>
+      <xs:element type="mitCarType" name="mitCar"/>
+      <xs:element type="mitTaxiType" name="mitTaxi"/>
+      <xs:element type="departureTransportType" name="departureTransport"/>
+      <xs:element type="arrivalTransportType" name="arrivalTransport"/>
+    </xs:sequence>
+    <xs:attribute type="xs:byte" name="active"/>
+  </xs:complexType>
+  <xs:complexType name="itdUsedOptionsType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="calcNumberOfTrips"/>
+        <xs:attribute type="xs:string" name="dwellTime"/>
+        <xs:attribute type="xs:byte" name="nextDepsPerLeg"/>
+        <xs:attribute type="xs:byte" name="calcCO2"/>
+        <xs:attribute type="xs:byte" name="realtime"/>
+        <xs:attribute type="xs:byte" name="realOnlyInfo"/>
+        <xs:attribute type="xs:string" name="itemType"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="itdTripOptionsType">
+    <xs:sequence>
+      <xs:element type="itdPtOptionsType" name="itdPtOptions"/>
+      <xs:element type="itdItOptionsType" name="itdItOptions"/>
+      <xs:element type="itdUsedOptionsType" name="itdUsedOptions"/>
+    </xs:sequence>
+    <xs:attribute type="xs:byte" name="userDefined"/>
+  </xs:complexType>
+  <xs:complexType name="itdItineraryType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="itdLegTTs"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="itdTripRequestType">
+    <xs:sequence>
+      <xs:element type="itdPrintConfigurationType" name="itdPrintConfiguration"/>
+      <xs:element type="itdAddressType" name="itdAddress"/>
+      <xs:element type="itdOdvType" name="itdOdv" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element type="itdTripDateTimeType" name="itdTripDateTime"/>
+      <xs:element type="itdTripOptionsType" name="itdTripOptions"/>
+      <xs:element type="itdItineraryType" name="itdItinerary"/>
+    </xs:sequence>
+    <xs:attribute type="xs:byte" name="requestID"/>
+  </xs:complexType>
+  <xs:complexType name="itdRequestType">
+    <xs:sequence>
+      <xs:element type="itdVersionInfoType" name="itdVersionInfo"/>
+      <xs:element type="itdInfoLinkListType" name="itdInfoLinkList"/>
+      <xs:element type="serverMetaInfoType" name="serverMetaInfo"/>
+      <xs:element type="itdTripRequestType" name="itdTripRequest"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="version"/>
+    <xs:attribute type="xs:string" name="language"/>
+    <xs:attribute type="xs:string" name="lengthUnit"/>
+    <xs:attribute type="xs:byte" name="sessionID"/>
+    <xs:attribute type="xs:string" name="client"/>
+    <xs:attribute type="xs:string" name="clientIP"/>
+    <xs:attribute type="xs:string" name="serverID"/>
+    <xs:attribute type="xs:string" name="virtDir"/>
+    <xs:attribute type="xs:dateTime" name="now"/>
+    <xs:attribute type="xs:byte" name="nowWD"/>
+  </xs:complexType>
+</xs:schema>

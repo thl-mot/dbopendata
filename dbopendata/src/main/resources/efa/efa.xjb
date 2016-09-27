@@ -1,0 +1,38 @@
+<jaxb:bindings xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+               xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" 
+               xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+               jaxb:extensionBindingPrefixes="xjc" 
+               version="1.0">
+    <jaxb:bindings schemaLocation="efa-trip-request.xsd" node="/xsd:schema">
+        <jaxb:schemaBindings>
+            <jaxb:package name="com.lauerbach.opendata.efa.xml"/>
+        </jaxb:schemaBindings>
+        
+		<jaxb:globalBindings>
+      		<xjc:simple />
+    	</jaxb:globalBindings>
+        
+        <jaxb:bindings node="//xsd:complexType[@name='paramType']">
+            <jaxb:bindings node=".//xsd:element[@name='value']">
+                <jaxb:property name="value"/>
+            </jaxb:bindings>
+        </jaxb:bindings>
+        <jaxb:bindings node="//xsd:complexType[@name='meansElemType']">
+            <jaxb:bindings node=".//xsd:attribute[@name='value']">
+                <jaxb:property name="valueAttribute"/>
+            </jaxb:bindings>
+        </jaxb:bindings>
+        <jaxb:bindings node="//xsd:complexType[@name='individualTransportType']">
+            <jaxb:bindings node=".//xsd:attribute[@name='value']">
+                <jaxb:property name="valueAttribute"/>
+            </jaxb:bindings>
+        </jaxb:bindings>
+        <jaxb:bindings node="//xsd:complexType[@name='odvNameElemType']">
+            <jaxb:bindings node=".//xsd:attribute[@name='value']">
+                <jaxb:property name="valueAttribute"/>
+            </jaxb:bindings>
+        </jaxb:bindings>
+        
+    </jaxb:bindings>
+    
+</jaxb:bindings>

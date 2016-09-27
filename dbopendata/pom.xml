@@ -49,6 +49,30 @@
 					</execution>
 				</executions>
 			</plugin>
+
+			<plugin>
+				<groupId>org.jvnet.jaxb2.maven2</groupId>
+				<artifactId>maven-jaxb2-plugin</artifactId>
+				<version>0.12.1</version>
+				<executions>
+					<execution>
+						<id>efa-trip-request</id>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<schemaDirectory>src/main/resources</schemaDirectory>
+							<schemaIncludes>
+								<include>efa/efa-trip-request.xsd</include>
+							</schemaIncludes>
+							<bindingIncludes>
+								<bindingInclude>efa/efa.xjb</bindingInclude>
+							</bindingIncludes>
+							<generateDirectory>${project.build.directory}/generated-sources/efa</generateDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 

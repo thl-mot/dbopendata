@@ -31,7 +31,7 @@ import com.lauerbach.dbopendata.bahnde.xml.Type;
  * @author thomas
  *
  */
-public class OpenDataClient {
+public class DBOpenDataService {
 	static final String AUTH_KEY="DBhackFrankfurt0316";
 	
 	// http://download-data.deutschebahn.com/static/apis/fahrplan/Fpl-API-Doku-Open-Data-BETA-0_81_2.pdf
@@ -57,11 +57,11 @@ public class OpenDataClient {
 
 	public final String baseUrlStr = "https://open-api.bahn.de/bin/rest.exe";
 
-	public OpenDataClient() {
+	public DBOpenDataService() {
 		this.authKey = System.getProperty("com.lauerbach.dbopendata.authKey", "DBhackFrankfurt0316");
 	}
 
-	public OpenDataClient(String authKey) {
+	public DBOpenDataService(String authKey) {
 		this.authKey = authKey;
 	}
 

@@ -1,0 +1,27 @@
+<form action="XSLT_TRIP_REQUEST2" method="post">
+<input type="hidden" name="sessionID" id="sessionID" value="0" />
+<input type="hidden" name="requestID" id="requestID" value="0" />
+<input type="hidden" name="language" id="language" value="de" />
+<input type="hidden" name="command" id="command" value="" />
+<input type="hidden" name="execInst" id="execInst" value="" />
+<input type="hidden" name="stateless" id="stateless" value="1" />
+<input type="hidden" name="itdLPxx_frames" id="itdLPxx_frames" value="" />
+<input type="hidden" name="useRealtime" value="1" />
+<input type="hidden" name="locationServerActive" value="1" />
+<input type="hidden" name="convertStopsPTKernel2LocationServer" value="1" />
+<input type="hidden" name="convertAddressesITKernel2LocationServer" value="1" />
+<input type="hidden" name="convertCoord2LocationServer" value="1" />
+<input type="hidden" name="convertCrossingsITKernel2LocationServer" value="1" />
+<input type="hidden" name="convertPOIsITKernel2LocationServer" value="1" />
+<input type="hidden" name="anySigWhenPerfectNoOtherMatches" value="1" />
+<input type="hidden" name="anyMaxSizeHitList" value="350" />
+<input type="hidden" name="w_objPrefAm" id="w_objPrefAm" value="2" />
+<input type="hidden" name="w_regPrefAl" id="w_regPrefAl" value="8" />
+<input type="hidden" name="prMinQu" value="1" />
+<input type="hidden" name="itOptionsActive" value="1" />
+<input type="hidden" name="ptOptionsActive" value="1" />
+<input type="hidden" name="prepareSpT" value="1" />
+<input type="hidden" name="outputOptionsActive" value="1" />
+<input type="hidden" name="coordListOutputFormat" value="STRING" />
+<select id="name_origin" name="name_origin">
+<option value="47:48">Karlsruhe, Ahaweg	(Adresse)</option>
