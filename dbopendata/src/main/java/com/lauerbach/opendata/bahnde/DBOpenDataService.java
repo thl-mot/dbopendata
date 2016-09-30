@@ -1,4 +1,4 @@
-package com.lauerbach.dbopendata.bahnde;
+package com.lauerbach.opendata.bahnde;
 
 import java.io.BufferedInputStream;
 import java.io.FileOutputStream;
@@ -14,13 +14,13 @@ import java.util.Iterator;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Unmarshaller;
 
-import com.lauerbach.dbopendata.bahnde.xml.ArrivalBoard;
-import com.lauerbach.dbopendata.bahnde.xml.DepartureBoard;
-import com.lauerbach.dbopendata.bahnde.xml.JourneyDetail;
-import com.lauerbach.dbopendata.bahnde.xml.LocationList;
-import com.lauerbach.dbopendata.bahnde.xml.Name;
-import com.lauerbach.dbopendata.bahnde.xml.Note;
-import com.lauerbach.dbopendata.bahnde.xml.Type;
+import com.lauerbach.opendata.bahnde.xml.ArrivalBoard;
+import com.lauerbach.opendata.bahnde.xml.DepartureBoard;
+import com.lauerbach.opendata.bahnde.xml.JourneyDetail;
+import com.lauerbach.opendata.bahnde.xml.LocationList;
+import com.lauerbach.opendata.bahnde.xml.Name;
+import com.lauerbach.opendata.bahnde.xml.Note;
+import com.lauerbach.opendata.bahnde.xml.Type;
 
 /**
  * 

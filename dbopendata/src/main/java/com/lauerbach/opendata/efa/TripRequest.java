@@ -5,7 +5,12 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 
+import com.lauerbach.opendata.efa.StationDefinitionParameters.TravelPoint;
+
 /**
+ * 
+ * 
+ * 
  * 
  * @author thomas
  *
@@ -15,25 +20,29 @@ public class TripRequest {
 
 	String language = "de";
 
-	private String origin_name = "";
-	private String origin_place = "";
-	private Type origin_type = Type.ADDRESS;
-	private String destination_name;
-	private String destination_place = "";
-	private Type destination_type = Type.ADDRESS;
-
-	public enum Type {
-		ADDRESS("address");
+	private StationDefinitionParameters origin, destination, via, noVia;
+	
+	// itdDateDay=27&
+	// itdDateMonth=09&
+	// itdDateYear=2016&
+	// itdTimeHour=08&
+	// itdTimeMinute=53&
+	// itdTripDateTimeDepArr=dep&
+	// lineRestriction=400&
+	// routeType=LEASTTIME&
+	// changeSpeed=normal&
+	
+	public enum DatePoint {
+		DEPARTURE("dep"), ARRIVAL("arr");
 		String value;
-
-		Type(String str) {
+		DatePoint(String str) {
 			value = str;
 		}
 	}
 
 	public TripRequest( String o_Name, String d_Name) {
-		this.origin_name= o_Name;
-		this.destination_name= d_Name;
+		this.origin= new StationDefinitionParameters( TravelPoint.ORIGIN, o_Name);
+		this.destination= new StationDefinitionParameters( TravelPoint.DESTINATION, d_Name);
 	}
 	
 	public URL getURL() {
@@ -41,14 +50,13 @@ public class TripRequest {
 			String urlStr = baseUrl;
 			urlStr += "language=" + language;
 
-			urlStr += "&place_origin="+URLEncoder.encode( origin_place, "UTF-8");
-			urlStr += "&name_origin=" + URLEncoder.encode(origin_name, "UTF-8");
-			urlStr += "&type_origin=" + Type.ADDRESS.value;
-			urlStr += "&place_destination="+URLEncoder.encode( destination_place, "UTF-8");
-			urlStr += "&name_destination=" + URLEncoder.encode(destination_name, "UTF-8");
-			urlStr += "&type_destination=" + Type.ADDRESS.value;
+			urlStr += origin!=null ? origin.getParameters() : "";
+			urlStr += destination!=null ? destination.getParameters() : "";
+			urlStr += via!=null ? via.getParameters() : "";
+			urlStr += noVia!=null ? noVia.getParameters() : "";
+			
 			return new URL(urlStr);
-		} catch (UnsupportedEncodingException | MalformedURLException e) {
+		} catch (MalformedURLException e) {
 			return null;
 		}
 	}

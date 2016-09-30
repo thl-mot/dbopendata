@@ -6,15 +6,15 @@ import java.util.Iterator;
 
 import org.junit.Test;
 
-import com.lauerbach.dbopendata.bahnde.DBOpenDataService;
-import com.lauerbach.dbopendata.bahnde.xml.Arrival;
-import com.lauerbach.dbopendata.bahnde.xml.ArrivalBoard;
-import com.lauerbach.dbopendata.bahnde.xml.Departure;
-import com.lauerbach.dbopendata.bahnde.xml.DepartureBoard;
-import com.lauerbach.dbopendata.bahnde.xml.JourneyDetail;
-import com.lauerbach.dbopendata.bahnde.xml.LocationList;
-import com.lauerbach.dbopendata.bahnde.xml.Stop;
-import com.lauerbach.dbopendata.bahnde.xml.StopLocation;
+import com.lauerbach.opendata.bahnde.DBOpenDataService;
+import com.lauerbach.opendata.bahnde.xml.Arrival;
+import com.lauerbach.opendata.bahnde.xml.ArrivalBoard;
+import com.lauerbach.opendata.bahnde.xml.Departure;
+import com.lauerbach.opendata.bahnde.xml.DepartureBoard;
+import com.lauerbach.opendata.bahnde.xml.JourneyDetail;
+import com.lauerbach.opendata.bahnde.xml.LocationList;
+import com.lauerbach.opendata.bahnde.xml.Stop;
+import com.lauerbach.opendata.bahnde.xml.StopLocation;
 
 public class TestOpenDataClient {
 

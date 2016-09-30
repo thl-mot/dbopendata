@@ -1,19 +1,19 @@
-package com.lauerbach.dbopendata.bahnde.xml;
+package com.lauerbach.opendata.bahnde.xml;
 
 import javax.xml.bind.annotation.XmlAttribute;
 
-public class Name {
-	String name;
+public class Type {
+	String type;
 	int routeIdxFrom;
 	int routeIdxTo;
 
-	@XmlAttribute(name = "name")
-	public String getName() {
-		return name;
+	@XmlAttribute(name = "type")
+	public String getType() {
+		return type;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setType(String name) {
+		this.type = name;
 	}
 
 	@XmlAttribute(name = "routeIdxFrom")

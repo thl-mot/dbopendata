@@ -33,6 +33,18 @@
             </jaxb:bindings>
         </jaxb:bindings>
         
+        <jaxb:bindings node="//xsd:complexType[@name='itdDateTimeType']">
+			<jaxb:class implClass="com.lauerbach.opendata.efa.xmlhelper.DateElement">
+            	<jaxb:javadoc><![CDATA[Class-level Javadoc comment added by JAXB binding file.]]></jaxb:javadoc>
+         	</jaxb:class>
+        </jaxb:bindings>
+        
+        <jaxb:bindings node="//xsd:complexType[@name='itdRTDateTimeType']">
+			<jaxb:class implClass="com.lauerbach.opendata.efa.xmlhelper.RTDateElement">
+            	<jaxb:javadoc><![CDATA[Class-level Javadoc comment added by JAXB binding file.]]></jaxb:javadoc>
+         	</jaxb:class>
+        </jaxb:bindings>
+
     </jaxb:bindings>
     
 </jaxb:bindings>

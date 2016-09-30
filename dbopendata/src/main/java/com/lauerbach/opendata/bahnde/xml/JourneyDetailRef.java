@@ -1,4 +1,4 @@
-package com.lauerbach.dbopendata.bahnde.xml;
+package com.lauerbach.opendata.bahnde.xml;
 
 import java.net.MalformedURLException;
 import java.net.URL;

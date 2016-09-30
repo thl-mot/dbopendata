@@ -1,4 +1,4 @@
-package com.lauerbach.dbopendata.bahnde.xml;
+package com.lauerbach.opendata.bahnde.xml;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;

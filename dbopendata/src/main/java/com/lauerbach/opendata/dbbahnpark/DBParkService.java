@@ -1,4 +1,4 @@
-package com.lauerbach.dbopendata.dbbahnpark;
+package com.lauerbach.opendata.dbbahnpark;
 
 import java.io.BufferedInputStream;
 import java.io.FileOutputStream;
