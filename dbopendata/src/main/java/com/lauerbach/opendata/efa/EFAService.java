@@ -5,6 +5,7 @@ import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.logging.Logger;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Unmarshaller;
@@ -25,11 +26,13 @@ import com.lauerbach.opendata.efa.xml.ItdRequest;
 
 public class EFAService {
 
+	Logger log= Logger.getLogger( EFAService.class.getName()); 
+			
 	private String baseDmRequestURL = "http://efa-bw.de/nvbw/XML_DM_REQUEST";
 
 	private ItdRequest getXMLResponse(URL requestUrl) {
 		try {
-			System.out.println("Request: " + requestUrl.toString());
+			log.info("Request: " + requestUrl.toString());
 			Object response = null;
 			JAXBContext context;
 			context = JAXBContext.newInstance(ItdRequest.class);
