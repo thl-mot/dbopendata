@@ -64,10 +64,10 @@ public class EFAService {
 	}
 
 	// http://efa-bw.de/nvbw/XML_DM_REQUEST?sessionID=BW-WW0579802379&requestID=1&language=de&command=&execInst=&stateless=1&itdLPxx_frames=&useRealtime=1&depType=stopEvents&includeCompleteStopSeq=1&ptOptionsActive=1&nameX_dm=3458464&nameY_dm=729943&nameDisplay_dm=Karlsruhe%2C+Tullastra%DFe&typeDisplay_dm=stop&dmLineSelectionAll=0&dmLineSelection=1%3A0&dmLineSelection=1%3A1&dmLineSelection=1%3A2&dmLineSelection=1%3A3&itdDateTimeDepArr=dep
-	public ItdRequest getStationBoardLine(String sessionID, String... lineSelection) {
+	public ItdRequest getStationBoardLine(String sessionID, StationBoardEnum type, String... lineSelection) {
 		DmRequest dmRequest = new DmRequestLineSelection(sessionID, lineSelection);
 		dmRequest.useRealtime = true;
-		dmRequest.itdDateTimeDepArr= StationBoardEnum.ARRIVAL;
+		dmRequest.itdDateTimeDepArr= type;
 		ItdRequest response = getXMLResponse(dmRequest.getURL(baseDmRequestURL));
 		return response;
 	}

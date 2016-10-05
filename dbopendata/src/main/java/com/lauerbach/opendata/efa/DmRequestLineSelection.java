@@ -15,6 +15,7 @@ public class DmRequestLineSelection extends DmRequest {
 		this.station= null;
 		this.date= null;
 		this.lineSelectionAll= false;
+		this.itdDateTimeDepArr= null;
 	}
 	
 	public URL getURL(String baseUrl) {

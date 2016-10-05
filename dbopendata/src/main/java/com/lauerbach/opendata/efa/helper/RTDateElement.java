@@ -1,4 +1,4 @@
-package com.lauerbach.opendata.efa.xmlhelper;
+package com.lauerbach.opendata.efa.helper;
 
 import java.util.Calendar;
 import java.util.Date;
