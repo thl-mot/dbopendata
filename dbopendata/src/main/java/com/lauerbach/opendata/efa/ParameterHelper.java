@@ -29,7 +29,7 @@ public class ParameterHelper {
 		}
 	}
 
-	public static String getParameters(String name, boolean useRealtime) {
+	public static String getParameter(String name, boolean useRealtime) {
 		return "&"+name+"="+ (useRealtime ? "1" : "0");
 	}
 	
@@ -39,6 +39,16 @@ public class ParameterHelper {
 		} catch (UnsupportedEncodingException e) {
 			return "";
 		}
+	}
+
+	public static String getParameter(String name, String[] lineSelection) {
+		String result="";
+		if (lineSelection!=null) {
+			for (int i=0; i<lineSelection.length; i++) {
+				result+= getParameter(name, lineSelection[i]);
+			}
+		}
+		return result;
 	}
 	
 }

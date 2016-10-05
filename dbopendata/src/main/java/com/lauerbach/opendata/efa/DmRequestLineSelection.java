@@ -5,14 +5,16 @@ import java.net.URL;
 
 public class DmRequestLineSelection extends DmRequest {
 	
-	private String lineSelection=null;
+	private String[] lineSelection=null;
+	private boolean lineSelectionAll;
 	
-	public DmRequestLineSelection(String sessionID, String lineSelection) {
+	public DmRequestLineSelection(String sessionID, String... lineSelection) {
 		super( null, null);
 		this.sessionID= sessionID;
 		this.lineSelection= lineSelection;
 		this.station= null;
 		this.date= null;
+		this.lineSelectionAll= false;
 	}
 	
 	public URL getURL(String baseUrl) {
@@ -23,7 +25,8 @@ public class DmRequestLineSelection extends DmRequest {
 			urlStr += ParameterHelper.getParameter("requestID", "1");
 			urlStr += station != null ? station.getParameters() : "";
 			urlStr += ParameterHelper.getParameters(date);
-			urlStr += ParameterHelper.getParameters("useRealtime",useRealtime);
+			urlStr += ParameterHelper.getParameter("useRealtime",useRealtime);
+			urlStr += ParameterHelper.getParameter("dmLineSelectionAll", lineSelectionAll);
 			urlStr += ParameterHelper.getParameter("dmLineSelection", lineSelection);
 			urlStr += itdDateTimeDepArr!=null ? "&itdDateTimeDepArr="+itdDateTimeDepArr.getName() : "";
 			return new URL(urlStr);

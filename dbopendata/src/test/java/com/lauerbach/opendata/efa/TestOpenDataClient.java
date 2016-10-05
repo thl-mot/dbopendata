@@ -1,4 +1,4 @@
-package dbopendata;
+package com.lauerbach.opendata.efa;
 
 import java.net.MalformedURLException;
 import java.util.Date;

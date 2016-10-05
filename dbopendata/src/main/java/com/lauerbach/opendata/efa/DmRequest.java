@@ -80,7 +80,7 @@ public class DmRequest {
 			urlStr += ParameterHelper.getParameter("requestID", requestId);
 			urlStr += station != null ? station.getParameters() : "";
 			urlStr += ParameterHelper.getParameters(date);
-			urlStr += ParameterHelper.getParameters("useRealtime",useRealtime);
+			urlStr += ParameterHelper.getParameter("useRealtime",useRealtime);
 			urlStr += itdDateTimeDepArr!=null ? "&itdDateTimeDepArr="+itdDateTimeDepArr.name : "";
 			
 			return new URL(urlStr);

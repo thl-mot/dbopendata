@@ -49,24 +49,24 @@ public class TestEfa {
 			OdvNameElemType nameElem = l.next();
 			System.out.println("  " + nameElem.getLocality() + "  " + nameElem.getValue());
 		}
-		
-		Iterator<ItdServingLineType> i = result.getItdDepartureMonitorRequest().getItdServingLines().getItdServingLines().iterator();
+
+		Iterator<ItdServingLineType> i = result.getItdDepartureMonitorRequest().getItdServingLines()
+				.getItdServingLines().iterator();
 		while (i.hasNext()) {
 			ItdServingLineType line = i.next();
-			System.out.println( line.getIndex()+" "+line.getTrainName()+" "+line.getDirection());
+			System.out.println(line.getIndex() + " " + line.getTrainName() + " " + line.getDirection());
 		}
-		
-		
+
 	}
 
 	@Test
 	public void testDepartureSingleLine() throws Exception {
 		EFAService efaService = new EFAService();
 		ItdRequest result = efaService.getStationBoard(StationBoardEnum.DEPARTURE, "Karlsruhe,Jägerhaus");
-		System.out.println("Version: "+result.getVersion());
-		System.out.println("SessionID: "+result.getVersion());
-		
-		result = efaService.getStationBoardLine( result.getSessionID(), "4:0");
+		System.out.println("Version: " + result.getVersion());
+		System.out.println("SessionID: " + result.getVersion());
+
+		result = efaService.getStationBoardLine(result.getSessionID(), "4:0");
 
 		ItdOdvType odv = result.getItdDepartureMonitorRequest().getItdOdv();
 		System.out.println(odv.getUsage());
@@ -75,32 +75,34 @@ public class TestEfa {
 			OdvNameElemType nameElem = l.next();
 			System.out.println("  " + nameElem.getLocality() + "  " + nameElem.getValue());
 		}
-		
+
 		System.out.println("Serving Lines");
-		Iterator<ItdServingLineType> i = result.getItdDepartureMonitorRequest().getItdServingLines().getItdServingLines().iterator();
+		Iterator<ItdServingLineType> i = result.getItdDepartureMonitorRequest().getItdServingLines()
+				.getItdServingLines().iterator();
 		while (i.hasNext()) {
 			ItdServingLineType line = i.next();
-			System.out.println( line.getIndex()+" "+line.getTrainName()+" "+line.getDirection());
+			System.out.println(line.getIndex() + " " + line.getTrainName() + " " + line.getDirection());
 		}
-		
+
 		System.out.println("Departures");
-		Iterator<ItdDepartureType> depI = result.getItdDepartureMonitorRequest().getItdDepartureList().getItdDepartures().iterator();
+		Iterator<ItdDepartureType> depI = result.getItdDepartureMonitorRequest().getItdDepartureList()
+				.getItdDepartures().iterator();
 		while (depI.hasNext()) {
 			ItdDepartureType dep = depI.next();
-			System.out.println( dep.getItdServingLine().getRealtime()+" "+dep.getItdDateTime().toString()+": "+dep.getItdServingLine().getNumber()+" -> "+dep.getItdServingLine().getDirection());
+			System.out.println(dep.getItdServingLine().getRealtime() + " " + dep.getItdDateTime().toString() + ": "
+					+ dep.getItdServingLine().getNumber() + " -> " + dep.getItdServingLine().getDirection());
 		}
-		
-		
+
 	}
 
 	@Test
 	public void testArrivalSingleLine() throws Exception {
 		EFAService efaService = new EFAService();
 		ItdRequest result = efaService.getStationBoard(StationBoardEnum.ARRIVAL, "Karlsruhe,Jägerhaus");
-		System.out.println("Version: "+result.getVersion());
-		System.out.println("SessionID: "+result.getVersion());
-		
-		result = efaService.getStationBoardLine( result.getSessionID(), "4:0");
+		System.out.println("Version: " + result.getVersion());
+		System.out.println("SessionID: " + result.getVersion());
+
+		result = efaService.getStationBoardLine(result.getSessionID(), "4:0", "4:1", "4:2", "4:3");
 
 		ItdOdvType odv = result.getItdDepartureMonitorRequest().getItdOdv();
 		System.out.println(odv.getUsage());
@@ -109,20 +111,23 @@ public class TestEfa {
 			OdvNameElemType nameElem = l.next();
 			System.out.println("  " + nameElem.getLocality() + "  " + nameElem.getValue());
 		}
-		
+
 		System.out.println("Serving Lines");
-		Iterator<ItdServingLineType> i = result.getItdDepartureMonitorRequest().getItdServingLines().getItdServingLines().iterator();
+		Iterator<ItdServingLineType> i = result.getItdDepartureMonitorRequest().getItdServingLines()
+				.getItdServingLines().iterator();
 		while (i.hasNext()) {
 			ItdServingLineType line = i.next();
-			System.out.println( line.getIndex()+" "+line.getTrainName()+" "+line.getDirection());
+			System.out.println(line.getIndex() + " " + line.getTrainName() + " " + line.getDirection());
 		}
-		
+
 		System.out.println("Arrivals");
-		Iterator<ItdArrivalType> arrI = result.getItdDepartureMonitorRequest().getItdArrivalList().getItdArrivals().iterator();
+		Iterator<ItdArrivalType> arrI = result.getItdDepartureMonitorRequest().getItdArrivalList().getItdArrivals()
+				.iterator();
 		while (arrI.hasNext()) {
 			ItdArrivalType arr = arrI.next();
-			System.out.println( arr.getItdServingLine().getRealtime()+" "+arr.getItdDateTime().toString()+": "+arr.getItdServingLine().getNumber()+" -> "+arr.getItdServingLine().getDirection());
+			System.out.println(arr.getItdServingLine().getRealtime() + " " + arr.getItdDateTime().toString() + ": "
+					+ arr.getItdServingLine().getNumber() + " -> " + arr.getItdServingLine().getDirection());
 		}
 	}
-	
+
 }
